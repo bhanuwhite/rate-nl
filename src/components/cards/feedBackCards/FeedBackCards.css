@@ -1,0 +1,33 @@
+/* .p-tooltip-arrow {
+    display: block !important;
+  } */
+
+.tooltip{
+    position: absolute;
+    z-index: 30;
+}
+
+
+.box_shadow{
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: rotate(45deg);
+    left: -7px;
+    border: 1px solid;
+}
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #fff;
+    position: absolute;
+    top: 62px;
+    right: -55px;
+    transform: rotate(-92deg)
+  }
+  
