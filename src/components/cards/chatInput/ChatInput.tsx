@@ -3,7 +3,7 @@ import React from 'react'
 const ChatInput = () => {
   return (
     <div>
-      hello
+      Hello
     </div>
   )
 }
