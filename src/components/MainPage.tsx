@@ -8,7 +8,6 @@ function MainPage() {
        <div className='main_body bg-[#F6FCFE]'>
         <div className='mx-[50px] section'>
          <Cards/>
-
         </div>
         
       </div>
