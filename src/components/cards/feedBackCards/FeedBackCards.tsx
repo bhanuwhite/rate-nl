@@ -1,7 +1,9 @@
 import React from 'react'
 import './FeedBackCards.css'
-
-function FeedBackCards() {
+interface ChatInputProps {
+    onEditIconClick: () => void;
+  }
+const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick }) => {
     return (
         <>
             <div className='mb-4'>
