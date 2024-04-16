@@ -9,6 +9,9 @@ const ChatInput = () => {
     const handleNext=()=>{
         setNext((prev)=>(prev+1))
     }
+    const handlePrevious=()=>{
+        setNext((prev)=>(prev-1))
+    }
     const [displayText, setDisplayText] = useState(''); 
     const [onEnterText,setOnEnterText]=useState("Lorem ipsum dolor sit amet consectetur adipisicing elit.Illum eligendi voluptatibus aspernatur, repellendus, reiciendis illo ad ea voluptate est, maiores obcaecati corporis porro commodi! Culpa eius beatae itaque laudantium nam quaerat vel molestiae eveniet facere exercitationem est recusandae sit,repellendus voluptatem pariatur officiis architecto perferendis sint, sequi nobis nihil. Cum.")
 
@@ -32,13 +35,13 @@ const ChatInput = () => {
     <div className="main_body">
       <div className='section1'>
         <FeedBackCards onEditIconClick={handleEditIconClick} typedText={onEnterText}/>
-       {next===0&&<MultipleChoiceQues/>}
+       {next===1&&<MultipleChoiceQues/>}
        {next===5&&<MultipleChoiceAns/>}
 
         </div>
         <div className=" py-4  bg-[#F2F4F5] rounded-lg shadow-md fixed bottom-[43px] left-0 w-full" style={{ borderTop: '1px solid #D9DCDD', borderBottom: '1px solid #D9DCDD' }}>
           <div className='flex items-center justify-between max-w-[1200px] mx-auto gap-[20px]'>
-            <button type="button" className="text-gray-900  border border-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 text-center   dark:text-gray-400  dark:focus:ring-gray-800">Previous</button>
+            <button type="button" onClick={handlePrevious} className="text-gray-900  border border-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 text-center   dark:text-gray-400  dark:focus:ring-gray-800">Previous</button>
             <textarea
               id="message"
               value={displayText}
