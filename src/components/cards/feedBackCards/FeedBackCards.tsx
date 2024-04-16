@@ -315,7 +315,23 @@ const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick }) => {
                             <div className=' mx-auto flex max-w-[1000px]'>
                                 <div className="block  p-6 bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">
                                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Star Rating Answer</h5>
-                                    
+                                    <div className='bg-[#fff] me-2 flex items-center h-[80px] py-5 px-3 rounded min-w-[780px]' style={{ border: '1px solid #586166' }}>
+                                        <div className="flex items-center">
+                                            <input
+                                                defaultChecked
+                                                id="default-radio-2"
+                                                type="radio"
+                                                value=""
+                                                name="default-radio"
+                                                className="w-[2rem] h-[2rem] text-blue-600 bg-gray-100 border-gray-300  dark:bg-gray-700 dark:border-gray-600"
+                                            />
+                                            <label htmlFor="default-radio-2" className="ml-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300">
+                                            Boolean Answer
+                                            </label>
+                                        </div>
+
+
+                                    </div>
                                     <div className="angle-left"></div>
 
                                 </div>
