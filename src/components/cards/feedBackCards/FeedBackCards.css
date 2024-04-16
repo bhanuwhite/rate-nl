@@ -19,15 +19,4 @@
     left: -7px;
     border: 1px solid;
 }
-.triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 50px solid #fff;
-    position: absolute;
-    top: 62px;
-    right: -55px;
-    transform: rotate(-92deg)
-  }
-  
+ 
