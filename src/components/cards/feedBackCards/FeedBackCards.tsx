@@ -2,8 +2,10 @@ import React from 'react'
 import './FeedBackCards.css'
 interface ChatInputProps {
     onEditIconClick: () => void;
+    typedText: string;
   }
-const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick }) => {
+
+const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick,typedText }) => {
     return (
         <>
         <div className='mb-4'>
@@ -40,10 +42,9 @@ const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick }) => {
                         <div className=' mx-auto flex'>
                             <a href="#" className="block  p-6 bg-white border border-gray-200 rounded-lg relative shadow ">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Open Feedback Question</h5>
-                                <p className="font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Illum eligendi voluptatibus aspernatur, repellendus, reiciendis illo ad ea voluptate est, maiores obcaecati corporis
-                                    porro commodi! Culpa eius beatae itaque laudantium nam quaerat vel molestiae eveniet facere exercitationem est recusandae sit,
-                                    repellendus voluptatem pariatur officiis architecto perferendis sint, sequi nobis nihil. Cum.</p>
+                                <p className="font-normal text-gray-700 dark:text-gray-400">
+                                    {typedText}
+                                    </p>
                                 <div className="triangle"></div>
                             </a>
                         </div>
