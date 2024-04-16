@@ -69,7 +69,9 @@
 .shadow-bottom {
     box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1); 
 }
-
+.rating_left{
+    right: -9% !important;
+}
 .angle-left {
     background-color: #fff;
     text-align: left;
@@ -103,4 +105,15 @@
 }
 .angle-left:after {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+.edit_icon{
+    background-color: #799298;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
