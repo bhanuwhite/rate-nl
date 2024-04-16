@@ -1,7 +1,9 @@
 import React from 'react'
 import './FeedBackCards.css'
-
-function FeedBackCards() {
+interface ChatInputProps {
+    onEditIconClick: () => void;
+  }
+const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick }) => {
     return (
         <>
 
@@ -32,7 +34,7 @@ function FeedBackCards() {
             <div className='flex   items-center gap-[20px]'>
             <div >
                     <img src="/images/Undo_button.png" className="w-[150px]" alt="" />
-                    <img src="/images/Edit _button.png" className="w-[150px] mt-2" alt="" />
+                    <img src="/images/Edit _button.png" className="w-[150px] mt-2" onClick={onEditIconClick} alt="" />
 
                 </div>
             <div className=' mx-auto flex'>
