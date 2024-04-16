@@ -625,4 +625,3 @@ const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick,typedText }) =
 }
 
 export default FeedBackCards
-
