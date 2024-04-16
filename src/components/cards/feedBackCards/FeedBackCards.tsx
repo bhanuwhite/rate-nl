@@ -29,6 +29,7 @@ const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick,typedText }) =
                         </div>
                     </div>
                 </div>
+
             </div>
             
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
+  console.log(EnterClicked);
   return (
     <div>
       <div className="max-w-[1200px] justify-start mx-auto">
