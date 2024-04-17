@@ -263,46 +263,6 @@ const  FeedBackCards: React.FC<ChatInputProps>=({ onEditIconClick,typedText }) =
                         </div>
                     </div>
                 </div>
-                {/* <div className='max-w-[1200px] justify-end mx-auto flex my-5' >
-                    <div className='flex justify-end max-w-[1000px]'>
-                        <div className='flex   items-center gap-[20px] w-full'>
-                            <div className='me-3' >
-                                <img src="/images/Undo_button.png" className="w-[150px]" alt="" />
-                                <img src="/images/Edit _button.png" className="w-[150px] mt-2" alt="" />
-                            </div>
-                            <div className=' mx-auto flex max-w-[800px]'>
-                                <div className="block  p-6 bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Boolean Answer</h5>
-                                    <div className='bg-[#fff] me-2 flex items-center h-[80px] py-5 px-3 rounded  w-[50%]' style={{ border: '1px solid #586166' }}>
-                                        <div className="flex items-center">
-                                            <input
-                                                defaultChecked
-                                                id="default-radio-2"
-                                                type="radio"
-                                                value=""
-                                                name="default-radio"
-                                                className="w-[2rem] h-[2rem] text-blue-600 bg-gray-100 border-gray-300  dark:bg-gray-700 dark:border-gray-600"
-                                            />
-                                            <label htmlFor="default-radio-2" className="ml-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300">
-                                                Boolean Answer
-                                            </label>
-                                        </div>
-
-
-                                    </div>
-                                    <div className="angle-left"></div>
-
-                                </div>
-
-                            </div>
-                            <div>
-                                <div className='h-[50px] w-[50px] flex ms-3 items-center justify-center font-bold rounded-full bg-[#FFB703]'>
-                                    U.N
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                  <div className='max-w-[1200px] justify-end mx-auto flex my-5' >
                     <div className='flex justify-end max-w-[1000px]'>
                         <div className='flex   items-center gap-[20px] w-full'>
