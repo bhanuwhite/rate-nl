@@ -1,36 +1,4 @@
-/* .p-tooltip-arrow {
-    display: block !important;
-  } */
 
-.tooltip{
-    position: absolute;
-    z-index: 30;
-}
-
-
-.box_shadow{
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    transform: rotate(45deg);
-    left: -7px;
-    border: 1px solid;
-}
-
-/* .triangle-left {
-    position: absolute;
-    left: -30px;
-    top: 39%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 17px;
-    border-top: 23px solid transparent;
-    border-bottom: 29px solid transparent;
-    border-right: 31px solid #ECF8FD;
-} */
 
 
 .triangle-left {
