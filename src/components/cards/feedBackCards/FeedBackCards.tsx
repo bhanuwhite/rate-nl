@@ -13,6 +13,11 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
   onEditIconClick,
   typedText,
 }) => {
+    // const [data,setData]=React.useState('data is assigned a value but never used ')
+    // const handleClick=()=>{
+    //     const value = new SpeechSynthesisUtterance(data);
+    //     window.speechSynthesis.speak(value)
+    // }
   return (
     <>
       <div className="mb-4">
@@ -36,6 +41,7 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
                     nam quaerat vel molestiae eveniet facere exercitationem est
                     recusandae sit, repellendus voluptatem pariatur officiis
                     architecto perferendis sint, sequi nobis nihil. Cum.
+                    {/* {data} */}
                   </p>
                   <div className="triangle-left"></div>
                 </div>
@@ -43,7 +49,8 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
               <div className="ms-3">
                 <div className="edit_icon">
                   <HiSpeakerWave
-                    className="h-[25px] w-[25px]"
+                //   onClick={handleClick}
+                    className="h-[25px] w-[25px] cursor-pointer"
                     style={{ color: "#fff" }}
                   />
                 </div>
@@ -92,7 +99,7 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
             </div>
           </div>
         )}
-        
+
         {/* <div className="max-w-[1200px] justify-start mx-auto">
           <div className="flex max-w-[1000px]">
             <div className="flex items-center gap-[20px] relative">

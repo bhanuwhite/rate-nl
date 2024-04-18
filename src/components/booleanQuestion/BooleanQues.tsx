@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { MdEdit, MdOutlineRefresh } from "react-icons/md";
 
-const BooleanQues = ({ onChange, EnterClicked, boolAns }: any) => {
-  const [ans, setans] = useState("Option1");
-  const handleOptionChange = (option: string) => {
+const BooleanQues = ({ onChange, boolAns }: any) => {
+  const [ans, setans] = useState();
+  const handleOptionChange = (option: any) => {
     setans(option);
     onChange(option); 
   };

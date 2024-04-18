@@ -2,7 +2,7 @@ import React from "react";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { MdEdit, MdOutlineRefresh } from "react-icons/md";
 
-const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
+const MultipleCheck = ({ onChange, check }: any) => {
     console.log(check)
   return (
     <div>
@@ -82,7 +82,7 @@ const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
                   <div className="flex items-center">
                     <input
                       onChange={() =>
-                        onChange("Chosen Answer out of Multiple Choice")
+                        onChange("Chosen Answer out of Multiple Choice1")
                       }
                       id="checked-checkbox"
                       type="checkbox"
@@ -92,7 +92,7 @@ const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
                       htmlFor="checked-checkbox"
                       className="ms-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
                     >
-                      Chosen Answer out of Multiple Choice
+                      Chosen Answer out of Multiple Choice1
                     </label>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
                   <div className="flex items-center">
                     <input
                       onChange={() =>
-                        onChange("Chosen Answer out of Multiple Choice")
+                        onChange("Chosen Answer out of Multiple Choice2")
                       }
                       id="checked-checkbox"
                       type="checkbox"
@@ -113,7 +113,7 @@ const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
                       htmlFor="checked-checkbox"
                       className="ms-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
                     >
-                      Chosen Answer out of Multiple Choice
+                      Chosen Answer out of Multiple Choice2
                     </label>
                   </div>
                 </div>

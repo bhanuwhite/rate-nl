@@ -1,6 +1,6 @@
 import React from "react";
 
-const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
+const MultipleChoiceQues = ({ onChange, answer }: any) => {
   return (
     <div>
       <div className="max-w-[1200px] justify-start mx-auto">
@@ -35,7 +35,7 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
                 >
                   <div className="flex items-center">
                     <input
-                      defaultChecked
+                      // defaultChecked
                       onChange={() =>
                         onChange("Chosen Answer out of Multiple Choice")
                       }
@@ -83,7 +83,7 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
                   <div className="flex items-center">
                     <input
                       onChange={() =>
-                        onChange("Possible Answer out of Multiple Choice")
+                        onChange("Possible Answer out of Multiple Choice1")
                       }
                       id="option3"
                       type="radio"
@@ -95,7 +95,7 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
                       htmlFor="default-radio-2"
                       className="ml-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
                     >
-                      Possible Answer out of Multiple Choice
+                      Possible Answer out of Multiple Choice1
                     </label>
                   </div>
                 </div>

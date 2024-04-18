@@ -11,7 +11,7 @@ import { HiSpeakerWave } from "react-icons/hi2";
 function Cards() {
   const history = useNavigate();
   const handleClick = () => {
-    history('/chatInput')
+    history('/SurveyStarted')
   }
   return (
     <>

@@ -14,8 +14,8 @@ function AppRoutes  ()  {
             <Header/>
             <Routes>
                 <Route path='/' element={<MainPage/>}/>
-                <Route path="/chatInput" element={<ChatInput/>}/>
-                <Route path="/cardLastPage" element={<CardLastPage/>}/>
+                <Route path="/SurveyStarted" element={<ChatInput/>}/>
+                <Route path="/SurveyCompleted" element={<CardLastPage/>}/>
 
             </Routes>
             <Footer/>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Reviewing = () => {
   const history=useNavigate();
   const handleApprove=()=>{
-    history('/cardLastPage')
+    history('/SurveyCompleted')
   }
   return (
     <div>
