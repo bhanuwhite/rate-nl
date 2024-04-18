@@ -1,6 +1,5 @@
 import React from "react";
 import "./FeedBackCards.css";
-// import { RxCross2 } from "react-icons/rx";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { MdEdit } from "react-icons/md";
 import { MdOutlineRefresh } from "react-icons/md";
@@ -14,7 +13,6 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
   onEditIconClick,
   typedText,
 }) => {
-  console.log(typedText);
   return (
     <>
       <div className="mb-4">
@@ -94,6 +92,7 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
             </div>
           </div>
         )}
+        
         {/* <div className="max-w-[1200px] justify-start mx-auto">
           <div className="flex max-w-[1000px]">
             <div className="flex items-center gap-[20px] relative">

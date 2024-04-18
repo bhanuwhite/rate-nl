@@ -1,7 +1,6 @@
 import React from "react";
 
 const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
-  console.log(EnterClicked);
   return (
     <div>
       <div className="max-w-[1200px] justify-start mx-auto">
@@ -114,8 +113,8 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
           </div>
         </div>
       </div>
-      {EnterClicked && (
-        <div className="max-w-[1200px] justify-end mx-auto flex my-5">
+      
+       {answer!==null&& <div className="max-w-[1200px] justify-end mx-auto flex my-5">
           <div className="flex justify-end max-w-[1000px]">
             <div className="flex   items-center gap-[20px] w-full">
               <div className="me-3">
@@ -166,8 +165,8 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
+      
     </div>
   );
 };

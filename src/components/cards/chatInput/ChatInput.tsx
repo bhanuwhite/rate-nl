@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import FeedBackCards from "../feedBackCards/FeedBackCards";
 import MultipleChoiceQues from "../../multipleChoice/MultipleChoiceQues";
 import BooleanQues from "../../booleanQuestion/BooleanQues";
-import { MdEdit, MdOutlineRefresh } from "react-icons/md";
 import RatingQues from "../../ratingQues/RatingQues";
 import MultipleCheck from "../../multipleCheck/MultipleCheck";
 import Reviewing from "../../reviewing/Reviewing";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 
 const ChatInput = () => {
-  const [answer, setAnswer] = useState<String>(
-    "Chosen Answer out of Multiple Choice"
-  );
-  const handleSelectOption = (option: string) => {
+  const [answer, setAnswer] = useState(null);
+  const handleSelectOption = (option: any) => {
     setAnswer(option);
   };
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
@@ -22,8 +22,8 @@ const ChatInput = () => {
       setSelectedOptions([...selectedOptions, option]);
     }
   };
-  const [boolAns, setBoolAns] = useState<String>("Option1");
-  const handleBoolSelect = (option: string) => {
+  const [boolAns, setBoolAns] = useState(null);
+  const handleBoolSelect = (option: any) => {
     setBoolAns(option);
   };
   const [next, setNext] = useState(0);
@@ -90,7 +90,14 @@ const ChatInput = () => {
   const handleChange = (e: any) => {
     setDisplayText(e.target.value);
   };
-
+  //@ts-ignore
+  const startListening = () =>
+    SpeechRecognition.startListening({ continuous: true, language: "en-IN" });
+  const { transcript, browserSupportsSpeechRecognition } =
+    useSpeechRecognition();
+  if (!browserSupportsSpeechRecognition) {
+    return null;
+  }
 
   return (
     <>
@@ -151,6 +158,8 @@ const ChatInput = () => {
             {(inputnext === 0 || inputnext === 5) && (
               <textarea
                 id="message"
+                // value={transcript}
+                // readOnly
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
@@ -172,6 +181,7 @@ const ChatInput = () => {
 
             {displayText !== "" ? (
               <button
+              onClick={handleSubmit}
                 type="button"
                 className="text-white w-[10%] bg-gray-700 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 flex justify-center dark:bg-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
               >
@@ -182,204 +192,43 @@ const ChatInput = () => {
                 src="/images/Record_button.png"
                 className="h-[32px] w-[32px] "
                 alt=""
+                onClick={startListening}
               />
             )}
-
-            {inputnext === 1 && radio ? (
-              <div className="max-w-[1200px] justify-end mx-auto flex my-5">
-                <div className="flex justify-end max-w-[1000px]">
-                  <div className="flex   items-center gap-[20px] w-full">
-                    <div className="me-3">
-                      <img
-                        src="/images/Undo_button.png"
-                        className="w-[150px]"
-                        alt=""
-                      />
-                      <img
-                        src="/images/Edit _button.png"
-                        className="w-[150px] mt-2"
-                        alt=""
-                      />
-                    </div>
-                    <div className=" mx-auto flex max-w-[1000px]">
-                      <div className="block  p-6 bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Muliple Choise Answer
-                        </h5>
-                        <div
-                          className="bg-[#fff] me-2 flex items-center h-[80px] py-5 px-3 rounded min-w-[780px]"
-                          style={{ border: "1px solid #586166" }}
-                        >
-                          <div className="flex items-center">
-                            <input
-                              onKeyDown={handlePress}
-                              checked={true}
-                              // id="default-radio-1"
-                              type="radio"
-                              value=""
-                              // name="default-radio-1"
-                              className="w-[2rem] h-[2rem] text-blue-600 bg-gray-100 border-gray-300  dark:bg-gray-700 dark:border-gray-600"
-                            />
-                            <label
-                              htmlFor="default-radio-1"
-                              className="ml-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
-                            >
-                              {answer}
-                            </label>
-                          </div>
-                        </div>
-                        <div className="angle-left"></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="h-[50px] w-[50px] flex ms-3 items-center justify-center font-bold rounded-full bg-[#FFB703]">
-                        U.N
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              inputnext === 1 && (
-                <textarea
-                  id="message"
-                  value={displayText}
-                  onChange={handleChange}
-                  onKeyPress={handleTextareaKeyPress}
-                  className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="Write your short answer here"
-                ></textarea>
-              )
+            {inputnext === 1 && (
+              <textarea
+                id="message"
+                value={displayText}
+                onChange={handleChange}
+                onKeyPress={handleTextareaKeyPress}
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                placeholder="Write your short answer here"
+              ></textarea>
             )}
 
-            {inputnext === 2 && bool ? (
-              <div className="max-w-[1200px] justify-end mx-auto flex my-5">
-                <div className="flex justify-end max-w-[1000px]">
-                  <div className="flex items-center gap-[20px] w-full">
-                    <div className="me-3"></div>
-                    <div className=" mx-auto flex min-w-[800px]">
-                      <div className="block p-[2rem] bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Boolean Answer
-                        </h5>
-                        <div
-                          className="bg-[#fff] me-2 flex items-center w-[50%] h-[80px] py-5 px-3 rounded"
-                          style={{ border: "1px solid #586166" }}
-                        >
-                          <div className="flex items-center">
-                            <input
-                              onKeyDown={handleBoolPress}
-                              checked={true}
-                              // id="default-radio-2"
-                              type="radio"
-                              value=""
-                              // name="default-radio-2"
-                              className="w-[2rem] h-[2rem] text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
-                            />
-                            <label
-                              htmlFor="default-radio-2"
-                              className="ml-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
-                            >
-                              {boolAns}
-                            </label>
-                          </div>
-                        </div>
-                        <div className="angle-left"></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="h-[50px] w-[50px] flex ms-3 items-center justify-center font-bold rounded-full bg-[#FFB703]">
-                        U.N
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              inputnext === 2 && (
-                <textarea
-                  id="message"
-                  value={displayText}
-                  onChange={handleChange}
-                  onKeyPress={handleTextareaKeyPress}
-                  className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="Write your short answer here"
-                ></textarea>
-              )
+            {inputnext === 2 && (
+              <textarea
+                id="message"
+                value={displayText}
+                onChange={handleChange}
+                onKeyPress={handleTextareaKeyPress}
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                placeholder="Write your short answer here"
+              ></textarea>
             )}
 
-            {inputnext === 4 && checkBox ? (
-              <div className="max-w-[1200px] justify-end mx-auto flex my-5">
-                <div className="flex justify-end max-w-[1000px]">
-                  <div className="flex items-center gap-[20px] w-full">
-                    <div className="me-3"></div>
-                    <div className=" mx-auto flex max-w-[1000px]">
-                      <div className="block p-6 bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Your Answer(s) to the Muliple Choise / Multiple Answer
-                          Question
-                        </h5>
-                        {selectedOptions.map((option, index) => (
-                          <div
-                            key={index}
-                            className="bg-[#fff] flex items-center h-[80px] py-5 px-3 rounded"
-                            style={{ border: "1px solid #586166" }}
-                          >
-                            <div
-                              key={index}
-                              className="flex items-center mr-4 mb-2"
-                            >
-                              <input
-                                onKeyDown={handleCheckPress}
-                                id={`checked-checkbox-${index}`}
-                                type="checkbox"
-                                className="w-[2rem] h-[2rem] text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                                checked // Checkbox is always checked for selected options
-                              />
-                              <label
-                                htmlFor={`checked-checkbox-${index}`}
-                                className="ms-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
-                              >
-                                {option}
-                              </label>
-                            </div>
-                          </div>
-                        ))}
-                        <p className="font-normal ms-[5px] mt-4 text-gray-700 dark:text-gray-400 text-[18px] mb-4">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Integer erat velit, consequat ac erat quis,
-                          congue luctus mi. Aenean condimentum sem neque, eget
-                          congue felis pulvinar et. Praesent turpis nunc,
-                          tristique vitae faucibus ac, fringilla a tortor. In
-                          vitae cursus felis. Curabitur dictum tellus vitae eros
-                          pretium, at euismod ipsum mattis. In facilisis ipsum
-                          eu sem fermentum bibendum.
-                        </p>
-
-                        <div className="angle-left"></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="h-[50px] w-[50px] flex ms-3 items-center justify-center font-bold rounded-full bg-[#FFB703]">
-                        U.N
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              inputnext === 4 && (
-                <textarea
-                  id="message"
-                  value={displayText}
-                  onChange={handleChange}
-                  onKeyPress={handleTextareaKeyPress}
-                  className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="Write your short answer here"
-                ></textarea>
-              )
+            {inputnext === 4 && (
+              <textarea
+                id="message"
+                value={displayText}
+                onChange={handleChange}
+                onKeyPress={handleTextareaKeyPress}
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                placeholder="Write your short answer here"
+              ></textarea>
             )}
 
+           
             <button
               type="button"
               onClick={handleNext}

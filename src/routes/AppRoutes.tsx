@@ -4,6 +4,7 @@ import Header from '../pages/header/Header'
 import MainPage from '../components/MainPage'
 import ChatInput from '../components/cards/chatInput/ChatInput'
 import Footer from '../pages/footer/Footer'
+import CardLastPage from '../components/cardLastPage/CardLastPage'
 // import MultipleChoiceQues from '../components/multipleChoice/MultipleChoiceQues'
 
 function AppRoutes  ()  {
@@ -14,6 +15,7 @@ function AppRoutes  ()  {
             <Routes>
                 <Route path='/' element={<MainPage/>}/>
                 <Route path="/chatInput" element={<ChatInput/>}/>
+                <Route path="/cardLastPage" element={<CardLastPage/>}/>
 
             </Routes>
             <Footer/>

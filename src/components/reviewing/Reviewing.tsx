@@ -1,7 +1,12 @@
 import React from 'react'
 import { HiSpeakerWave } from 'react-icons/hi2'
+import { useNavigate } from 'react-router-dom'
 
 const Reviewing = () => {
+  const history=useNavigate();
+  const handleApprove=()=>{
+    history('/cardLastPage')
+  }
   return (
     <div>
         <div className="max-w-[1200px] justify-start mx-auto">
@@ -33,6 +38,7 @@ const Reviewing = () => {
 
                   <div className="flex gap-[20px]">
                     <button
+                    onClick={handleApprove}
                       type="button"
                       className="text-white min-w-[135px] bg-[#35AC7A] focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 "
                     >

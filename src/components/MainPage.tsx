@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../pages/footer/Footer'
 import Cards from './cards/Cards'
 // import CardLastPage from './cardLastPage/CardLastPage'
 

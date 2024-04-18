@@ -22,8 +22,7 @@ const BooleanQues = ({ onChange, EnterClicked, boolAns }: any) => {
               />
             </div>
             <div className="mx-auto relative max-w-[1000px]">
-              <a
-                href="#"
+              <div
                 className="block p-6 ms-[5px] border relative rounded-lg shadow-bottom bg-[#ECF8FD] w-full"
               >
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -79,7 +78,7 @@ const BooleanQues = ({ onChange, EnterClicked, boolAns }: any) => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
               <div className="triangle-left"></div>
             </div>
 
@@ -95,8 +94,8 @@ const BooleanQues = ({ onChange, EnterClicked, boolAns }: any) => {
         </div>
       </div>
 
-      {EnterClicked && (
-        <div className="max-w-[1200px] justify-end mx-auto flex my-5">
+       
+        {boolAns!==null &&<div className="max-w-[1200px] justify-end mx-auto flex my-5">
           <div className="flex justify-end max-w-[1000px]">
             <div className="flex items-center gap-[20px] w-full">
               <div className="me-3">
@@ -149,8 +148,7 @@ const BooleanQues = ({ onChange, EnterClicked, boolAns }: any) => {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
     </div>
   );

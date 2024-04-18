@@ -3,8 +3,10 @@ import { HiSpeakerWave } from "react-icons/hi2";
 import { MdEdit, MdOutlineRefresh } from "react-icons/md";
 
 const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
+    console.log(check)
   return (
     <div>
+
       <div className="max-w-[1200px] justify-start mx-auto">
         <div className="flex max-w-[1000px]">
           <div className="flex items-center gap-[20px] relative">
@@ -152,8 +154,7 @@ const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
         </div>
       </div>
 
-      {EnterClicked && (
-        <div className="max-w-[1200px] justify-end mx-auto flex my-5">
+        {check.length>0&&<div className="max-w-[1200px] justify-end mx-auto flex my-5">
           <div className="flex justify-end max-w-[1000px]">
             <div className="flex items-center gap-[20px] w-full">
               <div className="me-3">
@@ -219,8 +220,7 @@ const MultipleCheck = ({ onChange, EnterClicked, check }: any) => {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
     </div>
   );
 };
