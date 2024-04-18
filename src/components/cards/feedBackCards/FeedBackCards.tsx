@@ -16,18 +16,18 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
   return (
     <>
       <div className="mb-4">
-        <div className="max-w-[1200px] justify-start mx-auto">
+        <div className="max-w-[1200px] justify-start mx-[15px] lg:mx-auto">
           <div className="flex max-w-[1000px]">
             <div className="flex items-center gap-[20px] relative">
               <div>
                 <img src="/images/chatbot.png" className="w-[350px] " alt="abcd" />
               </div>
-              <div className="mx-auto relative min-w-[800px]">
+              <div className="mx-auto relative">
                 <div className="block p-[2rem] border relative rounded-lg shadow-bottom bg-[#ECF8FD] w-full">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 lg:text-2xl text-[20px] font-bold tracking-tight text-gray-900 dark:text-white">
                     Open Feedback Question
                   </h5>
-                  <p className="font-normal ms-[5px] text-gray-700 dark:text-gray-400 text-[18px]">
+                  <p className="font-normal ms-[5px] text-[15px] text-gray-700 dark:text-gray-400 lg:text-[18px]">
                     {" "}
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Illum eligendi voluptatibus aspernatur, repellendus,
@@ -36,8 +36,12 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
                     nam quaerat vel molestiae eveniet facere exercitationem est
                     recusandae sit, repellendus voluptatem pariatur officiis
                     architecto perferendis sint, sequi nobis nihil. Cum.
+ 
                   </p>
-                  <div className="triangle-left"></div>
+                  {/* <div className="triangle-left"></div> */}
+                  <div>
+                    <img src='/images/left.png' className="w-[25px] h-[40px] left-[-25px] top-[50%] transform -translate-y-1/2 absolute" alt="" />
+                  </div>
                 </div>
               </div>
               <div className="ms-3">
@@ -74,13 +78,16 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
                 </div>
                 <div className=" mx-auto flex">
                   <div className="block p-6 bg-white border border-gray-200 rounded-lg relative shadow ">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h5 className="mb-2 lg:text-2xl text-[20px] font-bold tracking-tight text-gray-900 dark:text-white">
                       Open Feedback Answer
                     </h5>
-                    <p className="font-normal ms-[5px] text-gray-700 dark:text-gray-400 text-[18px]">
+                    <p className="font-normal ms-[5px] text-[15px] text-gray-700 dark:text-gray-400 lg:text-[18px]">
                       {typedText}
                     </p>
-                    <div className="angle-left"></div>
+                    {/* <div className="angle-left"></div> */}
+                    <div>
+                    <img src='/images/right.png' className="w-[25px] h-[40px] right-[-25px] top-[50%] transform -translate-y-1/2 absolute" alt="" />
+                  </div>
                   </div>
                 </div>
                 <div>

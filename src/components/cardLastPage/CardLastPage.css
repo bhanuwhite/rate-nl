@@ -1,7 +1,7 @@
 .edit_icon{
     background-color: #799298;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -10,8 +10,8 @@
 }
 .icons{
     background-color: #3498DB;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     align-items: center;

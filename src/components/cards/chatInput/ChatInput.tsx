@@ -166,7 +166,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border min-h-[50px] overflow-y-auto border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border min-h-[50px] overflow-y-auto border-gray-300   dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
@@ -177,7 +177,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border overflow-y-auto min-h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border overflow-y-auto min-h-[50px] border-gray-300  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
@@ -186,7 +186,7 @@ const ChatInput = () => {
               <button
               onClick={handleSubmit}
                 type="button"
-                className="text-white w-[10%] bg-gray-700 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 flex justify-center dark:bg-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                className="text-white  min-w-[120px] justify-center bg-[#7C8388]   focus:outline-none   font-medium rounded-full text-sm px-2 py-[0.75rem] flex dark:bg-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
               >
                 Submit
               </button>
@@ -274,7 +274,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-y-auto  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
@@ -284,7 +284,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-y-auto   dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
@@ -294,7 +294,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-y-auto  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
