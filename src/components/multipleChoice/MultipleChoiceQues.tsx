@@ -1,4 +1,6 @@
 import React from "react";
+import { HiSpeakerWave } from "react-icons/hi2";
+import { MdEdit, MdOutlineRefresh } from "react-icons/md";
 
 const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
   return (
@@ -104,11 +106,12 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
             </div>
 
             <div className="ms-3">
-              <img
-                src="/images/Speaker_button.png"
-                className="w-[70px]"
-                alt=""
-              />
+            <div className="edit_icon">
+                <HiSpeakerWave
+                  className="h-[25px] w-[25px]"
+                  style={{ color: "#fff" }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -118,16 +121,18 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
           <div className="flex justify-end max-w-[1000px]">
             <div className="flex   items-center gap-[20px] w-full">
               <div className="me-3">
-                <img
-                  src="/images/Undo_button.png"
-                  className="w-[150px]"
-                  alt=""
-                />
-                <img
-                  src="/images/Edit _button.png"
-                  className="w-[150px] mt-2"
-                  alt=""
-                />
+              <div className="edit_icon">
+                  <MdOutlineRefresh
+                    className="h-[25px] w-[25px]"
+                    style={{ color: "#fff" }}
+                  />
+                </div>
+                <div className="edit_icon mt-2">
+                  <MdEdit
+                    className="h-[25px] w-[25px]"
+                    style={{ color: "#fff" }}
+                  />
+                </div>
               </div>
               <div className=" mx-auto flex max-w-[1000px]">
                 <div className="block  p-6 bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">

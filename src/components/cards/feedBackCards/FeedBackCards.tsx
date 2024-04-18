@@ -80,7 +80,7 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
                     <p className="font-normal ms-[5px] text-gray-700 dark:text-gray-400 text-[18px]">
                       {typedText}
                     </p>
-                    <div className="triangle"></div>
+                    <div className="angle-left"></div>
                   </div>
                 </div>
                 <div>

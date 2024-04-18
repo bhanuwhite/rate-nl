@@ -185,6 +185,9 @@ const RatingQues = () => {
                   <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
                     Star Rating Answer
                   </h5>
+                  <div className="angle-left rating_left">
+
+                                    </div>
 
                   <div className="flex justify-center">
                     <div className="bg-[#47BFE8] h-[70px] w-[30%] flex items-center justify-center">

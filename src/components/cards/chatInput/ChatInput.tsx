@@ -5,9 +5,12 @@ import BooleanQues from "../../booleanQuestion/BooleanQues";
 import RatingQues from "../../ratingQues/RatingQues";
 import MultipleCheck from "../../multipleCheck/MultipleCheck";
 import Reviewing from "../../reviewing/Reviewing";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
+import { MdEdit, MdOutlineRefresh } from "react-icons/md";
+// import SpeechRecognition, {
+//   useSpeechRecognition,
+// } from "react-speech-recognition";
+import { AiFillAudio } from "react-icons/ai";
+
 
 const ChatInput = () => {
   const [answer, setAnswer] = useState(null);
@@ -91,13 +94,13 @@ const ChatInput = () => {
     setDisplayText(e.target.value);
   };
   //@ts-ignore
-  const startListening = () =>
-    SpeechRecognition.startListening({ continuous: true, language: "en-IN" });
-  const { transcript, browserSupportsSpeechRecognition } =
-    useSpeechRecognition();
-  if (!browserSupportsSpeechRecognition) {
-    return null;
-  }
+  // const startListening = () =>
+  //   SpeechRecognition.startListening({ continuous: true, language: "en-IN" });
+  // const { transcript, browserSupportsSpeechRecognition } =
+  //   useSpeechRecognition();
+  // if (!browserSupportsSpeechRecognition) {
+  //   return null;
+  // }
 
   return (
     <>
@@ -163,7 +166,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border min-h-[50px] overflow-y-auto border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
@@ -174,7 +177,7 @@ const ChatInput = () => {
                 value={displayText}
                 onChange={handleChange}
                 onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border overflow-y-auto min-h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Write your short answer here"
               ></textarea>
             )}
@@ -188,23 +191,82 @@ const ChatInput = () => {
                 Submit
               </button>
             ) : (
-              <img
-                src="/images/Record_button.png"
-                className="h-[32px] w-[32px] "
-                alt=""
-                onClick={startListening}
+              <div className="edit_icon">
+              <AiFillAudio
+                className="h-[25px] w-[25px]"
+                style={{ color: "#fff" }}
               />
+            </div>
             )}
-            {inputnext === 1 && (
-              <textarea
-                id="message"
-                value={displayText}
-                onChange={handleChange}
-                onKeyPress={handleTextareaKeyPress}
-                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                placeholder="Write your short answer here"
-              ></textarea>
-            )}
+
+            {/* {inputnext === 1 && radio ? (
+              <div className="max-w-[1200px] justify-end mx-auto flex my-5">
+                <div className="flex justify-end max-w-[1000px]">
+                  <div className="flex   items-center gap-[20px] w-full">
+                    <div className="me-3">
+                    <div className="edit_icon">
+                  <MdOutlineRefresh
+                    className="h-[25px] w-[25px]"
+                    style={{ color: "#fff" }}
+                  />
+                </div>
+                <div className="edit_icon mt-2">
+                  <MdEdit
+                    className="h-[25px] w-[25px]"
+                    style={{ color: "#fff" }}
+                  />
+                </div>
+                    </div>
+                    <div className=" mx-auto flex max-w-[1000px]">
+                      <div className="block  p-6 bg-white border border-gray-200 rounded-lg relative shadow-bottom w-full">
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                          Muliple Choise Answer
+                        </h5>
+                        <div
+                          className="bg-[#fff] me-2 flex items-center h-[80px] py-5 px-3 rounded min-w-[780px]"
+                          style={{ border: "1px solid #586166" }}
+                        >
+                          <div className="flex items-center">
+                            <input
+                              onKeyDown={handlePress}
+                              checked={true}
+                              // id="default-radio-1"
+                              type="radio"
+                              value=""
+                              // name="default-radio-1"
+                              className="w-[2rem] h-[2rem] text-blue-600 bg-gray-100 border-gray-300  dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              htmlFor="default-radio-1"
+                              className="ml-2 text-[18px] font-semibold text-gray-900 dark:text-gray-300"
+                            >
+                              {answer}
+                            </label>
+                          </div>
+                        </div>
+                        <div className="angle-left"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="h-[50px] w-[50px] flex ms-3 items-center justify-center font-bold rounded-full bg-[#FFB703]">
+                        U.N
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              inputnext === 1 && (
+                <textarea
+                  id="message"
+                  value={displayText}
+                  onChange={handleChange}
+                  onKeyPress={handleTextareaKeyPress}
+                  className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                  placeholder="Write your short answer here"
+                ></textarea>
+              )
+            )} */}
 
             {inputnext === 2 && (
               <textarea
@@ -216,7 +278,16 @@ const ChatInput = () => {
                 placeholder="Write your short answer here"
               ></textarea>
             )}
-
+{inputnext === 1 && (
+              <textarea
+                id="message"
+                value={displayText}
+                onChange={handleChange}
+                onKeyPress={handleTextareaKeyPress}
+                className="block p-2.5 w-full focus:outline-none text-sm text-gray-700 bg-white rounded-lg border h-[50px] border-gray-300 overflow-hidden  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                placeholder="Write your short answer here"
+              ></textarea>
+            )}
             {inputnext === 4 && (
               <textarea
                 id="message"
@@ -232,7 +303,7 @@ const ChatInput = () => {
             <button
               type="button"
               onClick={handleNext}
-              className="text-white w-[15%] bg-gray-700 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 flex dark:bg-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+              className="text-white  min-w-[120px] justify-center bg-[#7C8388]   focus:outline-none   font-medium rounded-full text-sm px-2 py-[0.75rem] flex dark:bg-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
             >
               Next Question
             </button>

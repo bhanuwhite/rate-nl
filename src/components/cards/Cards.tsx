@@ -77,14 +77,14 @@ function Cards() {
               </div>
             </div>
           </div> */}
-      <div className='card  flex max-w-[1200px] bg-[#fff] rounded-lg mx-auto border border-blue-200' style={{ borderRadius: '15px' }}>
-        <div className='relative w-[35%]'>
+      <div className='card  flex flex-wrap lg:flex-no-wrap  max-w-[1200px] bg-[#fff] rounded-lg mx-auto border border-blue-200' style={{ borderRadius: '15px' }}>
+        <div className='relative   w-full lg:w-[35%] xl:w-[35%]'>
           <img src="/images/people.png" className=" w-[100%] h-[100%]" alt="" style={{ borderBottomLeftRadius: '11px', borderTopLeftRadius: '11px' }} />
-          <div className=''>
+          <div className='hidden lg:block'>
             <img src="/images/Vess_robot_icon.png" className="h-[137.8px] w-[137.91px]  absolute right-[-67px] top-[17%]  rounded-full" alt="" />
           </div>
         </div>
-        <div className='w-[65%]'>
+        <div className='lg:w-[65%] xl:w-[65%] w-full lg:p-0 sm:p-5'>
           <div className='max-w-[600px] mx-auto flex h-full flex-col justify-center'>
             <h1 className='text-[32px] font-medium mb-5 text-left'>Welcome to the survey!</h1>
             <p className='text-[13px] font-normal text-[#00303C] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat velit,
