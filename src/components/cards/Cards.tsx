@@ -86,7 +86,7 @@ function Cards() {
         </div>
         <div className='lg:w-[65%] xl:w-[65%] w-full lg:px-0 sm:px-5'>
           <div className='max-w-[600px] mx-auto flex h-full flex-col justify-center'>
-            <h1 className='text-[32px] font-medium mb-5 text-left'>Welcome to the survey!</h1>
+            <h1 className='lg:text-[32px] text-[20px] font-medium mb-5 text-left'>Welcome to the survey!</h1>
             <p className='text-[13px] font-normal text-[#00303C] leading-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat velit,
               consequat ac erat quis, congue luctus mi. Aenean condimentum sem neque, eget congue felis pulvinar et.
               Praesent turpis nunc, tristique vitae faucibus ac, fringilla a tortor. In vitae cursus felis.

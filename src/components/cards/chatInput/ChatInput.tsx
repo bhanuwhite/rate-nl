@@ -10,6 +10,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import { BsFillMicMuteFill } from "react-icons/bs";
 import { MdEdit, MdOutlineRefresh } from "react-icons/md";
+import './ChatInput.css'
 // import SpeechRecognition, {
 //   useSpeechRecognition,
 // } from "react-speech-recognition";
@@ -155,11 +156,8 @@ const ChatInput = () => {
             borderBottom: "1px solid #D9DCDD",
           }}
         >
-          <div className="flex items-center justify-between max-w-[1200px] mx-auto gap-[20px]">
-            {(next !== 0 ||
-              inputnext === 1 ||
-              inputnext === 2 ||
-              inputnext === 4) && (
+          <div className="flex items-center justify-between max-w-[1200px] mx-auto gap-[20px] chat_input_media">
+            {next !== 0 && (
               <button
                 type="button"
                 onClick={handlePrevious}

@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+    .chat_input_media {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+}
