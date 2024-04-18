@@ -20,7 +20,7 @@ const FeedBackCards: React.FC<ChatInputProps> = ({
           <div className="flex max-w-[1000px]">
             <div className="flex items-center gap-[20px] relative">
               <div>
-                <img src="/images/chatbot.png" className="w-[350px] " alt="" />
+                <img src="/images/chatbot.png" className="w-[350px] " alt="abcd" />
               </div>
               <div className="mx-auto relative min-w-[800px]">
                 <div className="block p-[2rem] border relative rounded-lg shadow-bottom bg-[#ECF8FD] w-full">
