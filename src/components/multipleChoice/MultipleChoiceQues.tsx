@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
   console.log(EnterClicked);
@@ -15,8 +15,7 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
               />
             </div>
             <div className="mx-auto relative max-w-[1000px]">
-              <a
-                href="#"
+              <div
                 className="block p-6 ms-[5px] border relative rounded-lg shadow-bottom bg-[#ECF8FD] w-full"
               >
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -101,7 +100,7 @@ const MultipleChoiceQues = ({ onChange, EnterClicked, answer }: any) => {
                     </label>
                   </div>
                 </div>
-              </a>
+              </div>
               <div className="triangle-left"></div>
             </div>
 
