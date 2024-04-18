@@ -9,24 +9,24 @@ const Reviewing = () => {
   }
   return (
     <div>
-        <div className="max-w-[1200px] justify-start mx-auto">
+        <div className="max-w-[1200px] justify-start mx-[15px] lg:mx-auto">
           <div className="flex max-w-[1000px]">
             <div className="flex items-center gap-[20px] relative">
               <div>
                 <img
                   src="/images/chatbot.png"
-                  className="w-[350px] mt-[-19px]"
+                  className="w-[350px]"
                   alt=""
                 />
               </div>
-              <div className="mx-auto relative min-w-[800px]">
+              <div className="mx-auto relative">
                 <div
                   className="block p-[2rem] ms-[5px] border relative rounded-lg shadow-bottom bg-[#ECF8FD] w-full"
                 >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 lg:text-2xl text-[20px] font-bold tracking-tight text-gray-900 dark:text-white">
                     Thank you for reviewing your input!
                   </h5>
-                  <p className="font-normal ms-[5px] text-gray-700 dark:text-gray-400 text-[18px] mb-4">
+                  <p className="font-normal ms-[5px] text-gray-700 dark:text-gray-400 lg:text-[18px] text-[15px] mb-4">
                     {" "}
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Integer erat velit, consequat ac erat quis, congue luctus
@@ -36,7 +36,7 @@ const Reviewing = () => {
                     tellus vitae eros pretium.
                   </p>
 
-                  <div className="flex gap-[20px]">
+                  <div className="flex flex-wrap lg:flex-no-wrap gap-[10px] sm:justify-center lg:gap-[20px]">
                     <button
                     onClick={handleApprove}
                       type="button"
@@ -52,7 +52,9 @@ const Reviewing = () => {
                     </button>
                   </div>
                 </div>
-                <div className="triangle-left"></div>
+                {/* <div className="triangle-left"></div> */}
+                <img src='/images/left.png' className="w-[25px] h-[40px] left-[-19px] top-[50%] transform -translate-y-1/2 absolute" alt="" />
+
               </div>
 
               <div className="ms-3">

@@ -1,0 +1,9 @@
+@media (max-width: 600px){
+    .boolean_question{
+        flex-wrap: wrap;
+    }
+    .boolean_input{
+        width: 100% !important;
+        min-width: auto;
+    }
+}
